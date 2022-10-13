@@ -108,6 +108,7 @@ class Engine(Enum):
     Yahoo = "https://search.yahoo.com/search?p={query}"
     Yandex = "https://yandex.com/search/?text={query}"
     Youtube = "https://www.youtube.com/results?search_query={query}"
+    Linux = "https://linux.die.net/man/1/{query}"
 
     def search(self, query, open_web=False, copy_url=False, additional_queries: dict = None):
         url = self.value.format(query=quote(query, safe=""))
